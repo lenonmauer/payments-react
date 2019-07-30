@@ -29,7 +29,7 @@ export default function reducer(state = INITIAL_STATE, action) {
 export const Creators = {
   postLoginRequest: data => ({
     type: Types.POST_LOGIN_REQUEST,
-    payload: data,
+    payload: { data },
   }),
 
   postLoginSuccess: data => ({

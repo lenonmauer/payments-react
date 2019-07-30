@@ -1,11 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { push } from 'connected-react-router';
 import * as Yup from 'yup';
 
-import { actions as ToastrActions } from 'react-redux-toastr';
-import { AuthActions } from '~/store/ducks/auth';
-import { toastrParams } from '~/helpers/toastr';
+import { LoginActions } from '~/store/ducks/login';
 
 import {
   Button, Label, Input, FormGroup, Card, Form,
@@ -24,16 +21,7 @@ function Login() {
   const dispatch = useDispatch();
 
   function handleSubmit(data) {
-    console.log(data);
-
-    if (data.email === 'a') {
-      dispatch(AuthActions.setUser(data));
-      dispatch(push('/dashboard'));
-      dispatch(ToastrActions.add(toastrParams('Login efetuado com sucesso.')));
-    }
-    else {
-      dispatch(ToastrActions.add(toastrParams('Ocorreu um erro no login.', 'danger')));
-    }
+    dispatch(LoginActions.postLoginRequest(data));
   }
 
   return (

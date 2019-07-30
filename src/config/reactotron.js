@@ -1,8 +1,10 @@
 /* eslint-disable */
 
+import Reactotron from 'reactotron-react-js';
+import { reactotronRedux } from 'reactotron-redux';
+import sagaPlugin from 'reactotron-redux-saga';
+
 if (process.env.NODE_ENV === 'development') {
-  const Reactotron = require('reactotron-react-js').default;
-  const { reactotronRedux } = require('reactotron-redux');
   const sagaPlugin = require('reactotron-redux-saga');
 
   const tron = Reactotron.configure()
@@ -15,4 +17,8 @@ if (process.env.NODE_ENV === 'development') {
   console.tron = tron;
 
   console.tron.log('reactotron on');
+} else {
+  console.tron = {
+    log: () => {},
+  };
 }

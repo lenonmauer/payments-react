@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^5.2.4",
+    "axios-mock-adapter": "^1.17.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.18.2",
