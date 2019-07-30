@@ -1,7 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { push } from 'connected-react-router';
 
-import { Container } from './styles';
+import { AuthActions } from '~/store/ducks/auth';
 
-const Logout = () => <Container>Login</Container>;
+function Logout() {
+  const dispatch = useDispatch();
+
+  dispatch(AuthActions.logoutUser());
+  dispatch(push('/dashboard'));
+
+  return <div />;
+}
 
 export default Logout;

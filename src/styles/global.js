@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import colors from '~/styles/colors';
+
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
 
 const globalStyle = createGlobalStyle`
@@ -13,9 +15,9 @@ const globalStyle = createGlobalStyle`
 body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  background: #24202C;
   font-family: 'MontSerrat', Helvetica, sans-serif !important;
-  color: #fff;
+  background: ${colors.primary.contrast};
+  color: ${colors.primary.contrast};
 }
 
 button {
@@ -28,6 +30,34 @@ button {
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
+}
+
+.redux-toastr  {
+  .toastr {
+    min-height: 50px !important;
+  }
+
+  .rrt-left-container {
+    display: none;
+  }
+
+  .rrt-middle-container {
+    width: 100% !important;
+    margin-left: 0px !important;
+    min-height: 50px;
+    display: flex;
+    padding-left: 10px !important;
+    align-items: center;
+  }
+
+  .toastr.rrt-success {
+    background: ${colors.primary.color} !important;
+  }
+
+  .toastr.rrt-danger {
+    background: ${colors.danger};
+    color: ${colors.white};
+  }
 }
 `;
 

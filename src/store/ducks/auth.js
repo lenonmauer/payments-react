@@ -4,7 +4,7 @@ const Types = {
 };
 
 const INITIAL_STATE = {
-  logged: false,
+  isLogged: false,
   data: {},
 };
 
@@ -13,7 +13,7 @@ export default function reducer(state = INITIAL_STATE, action) {
     case Types.SET_USER: {
       return {
         ...state,
-        logged: true,
+        isLogged: true,
         data: action.payload.data,
       };
     }

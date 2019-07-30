@@ -26,10 +26,9 @@ function App() {
 
             <ReduxToastr
               closeOnToastrClick
-              timeOut={3000}
               transitionIn="fadeIn"
               transitionOut="fadeOut"
-              position="bottom-right"
+              position="bottom-center"
             />
           </Container>
         </ConnectedRouter>

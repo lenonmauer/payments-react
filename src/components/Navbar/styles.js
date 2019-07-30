@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import colors from '~/styles/colors';
+
 export const Container = styled.div`
   display: flex;
   height: 80px;
-  background: #e5556e;
-  padding: 5px;
+  background: ${colors.primary.color};
+  padding: 5px 20px;
 `;
 
 export const Brand = styled.img`
   height: 70px;
   width: 70px;
+  border-radius: 35px;
 `;
 
 export const Navigation = styled.div`
@@ -20,12 +23,16 @@ export const Navigation = styled.div`
 `;
 
 export const NavigationLink = styled(Link)`
-  font-weight: bold;
+  display: flex;
   text-decoration: none;
-  color: #fff;
+  color: ${colors.primary.contrast};
   font-size: 16px;
-  padding: 1px 25px;
   line-height: 18px;
+  align-items: center;
+
+  & + a {
+    margin-left: 20px;
+  }
 `;
 
 export const MenuRightWrapper = styled.div`
@@ -33,4 +40,8 @@ export const MenuRightWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & > a {
+    padding: 4px;
+  }
 `;

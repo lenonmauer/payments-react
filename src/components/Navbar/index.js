@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import BrandIcon from '~/assets/images/brand.png';
 import Icon from '~/components/Icon';
@@ -9,28 +8,49 @@ import {
   Container, Brand, Navigation, NavigationLink, MenuRightWrapper,
 } from './styles';
 
-const Navbar = ({ pathname }) => (
-  <Container>
-    <Brand src={BrandIcon} />
+function Navbar() {
+  const { isLogged } = useSelector(state => state.auth);
 
-    <Navigation>
-      <NavigationLink to="/dashboard">Início</NavigationLink>
+  const loggedInRoutes = [
+    {
+      icon: 'exit_to_app',
+      label: 'Sair',
+      url: '/logout',
+    },
+  ];
 
-      <MenuRightWrapper>
-        <NavigationLink to="/logout">
-          <Icon name="exit_to_app " />
+  const loggedOutRoutes = [
+    {
+      icon: 'exit_to_app',
+      label: 'Cadastro',
+      url: '/signup',
+    },
+    {
+      icon: 'exit_to_app',
+      label: 'Login',
+      url: '/login',
+    },
+  ];
+
+  return (
+    <Container>
+      <Navigation>
+        <NavigationLink to="/">
+          <Brand src={BrandIcon} />
         </NavigationLink>
-      </MenuRightWrapper>
-    </Navigation>
-  </Container>
-);
 
-Navbar.propTypes = {
-  pathname: PropTypes.string.isRequired,
-};
+        <MenuRightWrapper>
+          {(isLogged ? loggedInRoutes : loggedOutRoutes).map(({ url, label, icon }) => (
+            <NavigationLink key={url} to={url}>
+              <Icon name={icon} />
+              &nbsp;
+              {label}
+            </NavigationLink>
+          ))}
+        </MenuRightWrapper>
+      </Navigation>
+    </Container>
+  );
+}
 
-const mapStateToProps = state => ({
-  pathname: state.router.location.pathname,
-});
-
-export default connect(mapStateToProps)(Navbar);
+export default Navbar;
