@@ -12,14 +12,13 @@ import history from '~/routes/history';
 import Routes from '~/routes';
 
 import GlobalStyle from '~/styles/global';
-import { Container } from './styles';
 
 function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ConnectedRouter history={history}>
-          <Container>
+          <>
             <GlobalStyle />
             <Navbar />
             <Routes />
@@ -30,7 +29,7 @@ function App() {
               transitionOut="fadeOut"
               position="bottom-center"
             />
-          </Container>
+          </>
         </ConnectedRouter>
       </PersistGate>
     </Provider>

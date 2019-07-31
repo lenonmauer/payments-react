@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import colors from '~/styles/colors';
 
 export const Container = styled.div`
-  display: flex;
   height: 80px;
   background: ${colors.primary.color};
   padding: 5px 20px;
