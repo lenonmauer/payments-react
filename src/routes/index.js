@@ -6,6 +6,7 @@ import PrivateRoute from '~/components/PrivateRoute';
 import NotFound from '~/pages/NotFound';
 
 import Dashboard from '~/pages/Dashboard';
+import Payment from '~/pages/Payment';
 import Cart from '~/pages/Cart';
 import Login from '~/pages/Login';
 import SignUp from '~/pages/SignUp';
@@ -17,6 +18,7 @@ function Routes() {
       <PrivateRoute exact path="/" component={Dashboard} />
       <PrivateRoute exact path="/dashboard" component={Dashboard} />
       <Route exact path="/cart" component={Cart} />
+      <Route exact path="/payment" component={Payment} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={SignUp} />
       <Route exact path="/logout" component={Logout} />

@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import colors from '~/styles/colors';
 
 import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
+import 'react-credit-cards/es/styles-compiled.css';
 
 const globalStyle = createGlobalStyle`
 * {
@@ -17,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   font-family: 'MontSerrat', Helvetica, sans-serif !important;
   background: ${colors.primary.contrast};
-  color: ${colors.primary.contrast};
+  color: ${colors.primary.color};
 }
 
 button {

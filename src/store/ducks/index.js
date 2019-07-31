@@ -5,8 +5,9 @@ import { persistCombineReducers } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 import auth from './auth';
-import login from './login';
 import cart from './cart';
+import login from './login';
+import signup from './signup';
 
 const persistConfig = {
   key: 'root',
@@ -18,6 +19,7 @@ export default history => persistCombineReducers(persistConfig, {
   router: connectRouter(history),
   toastr,
   auth,
-  login,
   cart,
+  login,
+  signup,
 });

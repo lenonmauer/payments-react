@@ -19,7 +19,8 @@
       "react/jsx-filename-extension": "off",
       "brace-style": ["error", "stroustrup"],
       "import/no-cycle": "off",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "no-template-curly-in-string": "off"
     },
     "settings": {
       "import/resolver": {

@@ -7180,6 +7180,13 @@ path-type@^3.0.0:
   dependencies:
     pify "^3.0.0"
 
+payment@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/payment/-/payment-2.3.0.tgz#b2a95e9c3052459647da3926b8b66c553d93098f"
+  integrity sha1-sqlenDBSRZZH2jkmuLZsVT2TCY8=
+  dependencies:
+    qj "~2.0.0"
+
 pbkdf2@^3.0.3:
   version "3.0.17"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.17.tgz#976c206530617b14ebb32114239f7b09336e93a6"
@@ -8097,6 +8104,11 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qj@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/qj/-/qj-2.0.0.tgz#054dd3b75ce018728d23a0605f030dfda0bd158a"
+  integrity sha1-BU3Tt1zgGHKNI6BgXwMN/aC9FYo=
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -8186,6 +8198,13 @@ react-app-polyfill@^1.0.1:
     regenerator-runtime "0.13.2"
     whatwg-fetch "3.0.0"
 
+react-credit-cards@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-credit-cards/-/react-credit-cards-0.7.0.tgz#a00b7ac404c410b01a5071fe09dcffe152c9ba5e"
+  integrity sha512-BMg8HoKYaBleNw9kyftDW6mq7ZrYa18tUbqJan6NZXhxiBa1ixb5C2xgldgO2/LUHfzymGTL4Yh+zAuorV142Q==
+  dependencies:
+    payment "^2.3.0"
+
 react-dev-utils@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.0.1.tgz#5c03d85a0b2537d0c46af7165c24a7dfb274bef2"
@@ -8236,6 +8255,11 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+
+react-payment-inputs@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-payment-inputs/-/react-payment-inputs-1.0.5.tgz#e69bad0f26c20dfb8ce511dd84f085e67a5a00e2"
+  integrity sha512-txL76fYxL9CMabCKj1v081HCaPAffG55l9H01MwFNNKlsIKiRF8E7Mr16ZIP65h0c1PphrmPoKCYiyvuKTHbyQ==
 
 react-redux-toastr@^7.5.1:
   version "7.5.1"
